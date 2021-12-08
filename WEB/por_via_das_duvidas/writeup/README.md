@@ -100,11 +100,13 @@ Essa classe é uma implementação padrão do AES-ECB.
 
 ### Resumo do funcionamento do ECB
 O modo de operação **Eletronic Codeblock (ECB)** é um dos modos de mais antigos e simples da criptografia de cifra de blocos. Nele, a mensagem a ser criptografada é dividida em blocos de mesmo tamanho, onde cada um desses blocos é criptografado separadamente (ou melhor, paralelamente).
+
 ![Funcionamento Encrypt - ECB](./ecb_encryption.png)
 
 A imagem acima explicíta melhor o funcionamento do mesmo: cada bloco de texto puro é criptografado utilizando a mesma KEY, gerando as "cifras de texto".
 
 E o processo de descriptografia é idêntico:
+
 ![Funcionamento Decrypt - ECB](./ecb_decryption.png)
 
 Onde cada cifra de texto é separada em blocos de mesmo tamanho e é aplicado, separadamente (ou paralelamente), a função de descriptografação utilizando a mesma KEY.
