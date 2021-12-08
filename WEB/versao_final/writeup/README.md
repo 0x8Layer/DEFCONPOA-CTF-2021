@@ -27,7 +27,7 @@ Então o seguinte nome do arquivo é válido: ```image') PAYLOAD -- -.jpg```. Po
 ```image') UNION SELECT ip_md5,0x61616161 FROM images -- -```
 ![Imagem 1](./versao_final1.png)
 
-Acessando ```/list```, além dos nomes de images temos também o valor "1633771873" cadastrado (0x616161 == 1633771873).
+Acessando ```/list```, além dos nomes de images temos também o valor "1633771873" cadastrado (0x61616161 == 1633771873).
 ![Imagem 2](./versao_final2.png)
 
 Portanto, para a flag:
