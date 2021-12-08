@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>Another XSS?</title>
+	</head>
+	<body>
+		<form action="/admin/send" method="POST">
+			<label for="url">URL</label>
+			<input name="url" id="url" type="text" />
+			<input type="submit" value="Send" />
+		</form>
+	</body>
+</html>
+

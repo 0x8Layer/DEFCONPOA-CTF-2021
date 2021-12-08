@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title%}{% endblock %}</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+	</head>
+	<body>
+		<div class="container is-fluid">
+			<div>
+				<nav class="navbar" role="navigation" aria-label="main navigation">
+					<div id="navbarBasic" class="navbar-menu">
+						<div class="navbar-start">
+							<a class="navbar-item" href="{{ url_for('index') }}">Home</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<div>
+				<section class="section">
+					{% block content %}{% endblock %}
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

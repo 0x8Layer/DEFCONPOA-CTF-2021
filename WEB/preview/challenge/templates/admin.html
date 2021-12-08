@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+<h1 class="title">Admin</h1>
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<div><p class="help is-danger">{{ messages[0] }}</p></div>
+	{% endif %}
+{% endwith %}
+<form method="POST" action="/show">
+	<div class="field">
+		<label for="url">URL of image</label>
+		<div class="control">
+			<input type="text" name="url" id="url" />
+		</div>
+	</div>
+	<div class="field">
+		<div class="control">
+			<input class="button is-link" type="submit" value="Preview" />
+		</div>
+	</div>
+</form>
+{% if content%}
+<div>
+	<img src="data:image/jpeg;base64,{{ content }}" />
+</div>
+{% endif %}
+{% endblock %}

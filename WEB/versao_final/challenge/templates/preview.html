@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1 class="title">Preview image</h1>
+{% if content%}
+<div>
+	<img src="data:image/jpeg;base64,{{ content }}" />
+</div>
+{% endif %}
+{% endblock %}

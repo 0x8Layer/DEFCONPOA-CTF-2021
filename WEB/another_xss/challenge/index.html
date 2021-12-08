@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Another XSS?</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/can.js/6.6.0/core.min.js"></script>
+	</head>
+	<body>
+		<p id="content"></p>
+		<script>
+			var params = can.deparam(location.search.slice(1));
+			var content = ( params.hasOwnProperty('content') ? params.content : "" );
+			
+			if (content.indexOf('<') != -1 || content.indexOf('>') != -1 || content.indexOf(':') != -1 || content.indexOf('(') != -1 || content.indexOf(')') != -1 || content.indexOf('`') != -1){ 
+				content = false;
+			} 
+
+			var child = document.getElementById("content");
+			child.innerHTML = content;
+		</script>
+		<!-- /admin -->
+	</body>
+</html>
+

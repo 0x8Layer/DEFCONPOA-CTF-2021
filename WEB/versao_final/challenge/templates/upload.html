@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1 class="title">Upload an image</h1>
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<div><p class="help is-danger">{{ messages[0] }}</p></div>
+	{% endif %}
+{% endwith %}
+<form method="POST" action="/upload" enctype="multipart/form-data">
+	<div class="field">
+		<label for="file">Image</label>
+		<div class="control">
+			<input type="file" name="file" id="file" />
+		</div>
+	</div>
+	<div class="field">
+		<div class="control">
+			<input class="button is-link" type="submit" value="Upload" />
+		</div>
+	</div>
+</form>
+{% endblock %}

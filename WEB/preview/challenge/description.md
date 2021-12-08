@@ -1,0 +1,1 @@
+O desenvolvedor do site está tentando criar um sistema de visualização de imagens, porém ele não tem conhecimento sobre segurança de aplicações web. Você consegue pegar a flag que se encontra em /flag?
